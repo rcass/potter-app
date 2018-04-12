@@ -5,6 +5,7 @@ import House from './container/House';
 import Page404 from './Page404';
 import NavBar from './components/NavBar';
 import Home from './container/Home';
+import User from './components/User';
 
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
@@ -24,6 +25,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/users" component={Users} />
+                <Route exact path="/users/:username" component={User} />
                 <Route exact path="/houseUsers" component={House} />
                 <Route path="/*" component={Page404} />
               </Switch>
